@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "verdict-shell-safety"
+version = "6.0.0"
+description = "Local, offline shell-command safety classifier (parse-then-classify)"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Eric Maddox" }]
+requires-python = ">=3.9"
+dependencies = [
+    "onnxruntime>=1.17",
+    "transformers>=4.40",
+    "huggingface_hub>=0.22",
+    "bashlex==0.18",
+    "numpy>=1.24",
+]
+
+[project.urls]
+Homepage = "https://github.com/ericmaddox/verdict-shell-safety"
+"Model weights" = "https://huggingface.co/aialchemist-dev/verdict-shell-safety"
+
+[tool.setuptools.packages.find]
+include = ["verdict_shell_safety*"]
